@@ -14,9 +14,9 @@ Researched answer:  Rails automatically adds a primary key id to each entry in o
 
 2. Which RESTful routes must always be passed params? Why?
 
-Your answer: show, delete and update since these actions require grabbing a single instance from the database.
+Your answer: show, delete and update since these actions require grabbing a single instance from the database. 
 
-Researched answer:
+Researched answer: show, delete, update require parameters for validations. with the proper validations in place the user can only enter the required information and not just any piece of info. Destroy and edit also require params in order to access a specific instance from the db like an instance with a id of 2.
 
 3. Name three rails generator commands. What is created by each? 
 

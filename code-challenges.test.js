@@ -38,11 +38,13 @@ describe("sentence", () => {
 
 const sentence = (personArray) => {
   return personArray.map(value => {
-    let name = person.name.split(" ")
-    let firstLetter = name[0].slice(0, 1).toUpperCase()
-    let firstName = name[0].slice(1)
-    let lastLetter = name[0].slice(0, 1).toUpperCase()
-    let lastName = name[0].slice(1)
+   let name = value.name.split(" ")
+   let firstLetter = name[0].slice(0, 1).toUpperCase()
+   let firstName = name[0].slice(1)
+   let lastLetter = name[1].slice(0, 1).toUpperCase()
+   let lastName = name[1].slice(1)
+   let occupation = value.occupation
+   return `${firstLetter}${firstName} ${lastLetter}${lastName} is ${occupation}.`
   })
 }
 
@@ -86,7 +88,7 @@ const mixedData = (array) => {
   let Arr = array.filter(element => {
         return typeof element === 'number'
       })
-      return Arr.map(number => {
+      return array.map(number => {
        return number % 3
       })
     }
